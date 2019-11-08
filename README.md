@@ -24,7 +24,7 @@ require_relative '../lib/student'
 
 DB = {:conn => SQLite3::Database.new("db/students.db")}
 ```
-
+<!-- 
 Your connection to the database can be referred to, throughout your program,
 like this: `DB[:conn]`.
 
@@ -38,55 +38,55 @@ turns it back into a Student object. We will call this `.new_from_db`.
 Next, we want to build a couple of methods to get information from the database.
 We will call these `.find_by_name` and `.all`.
 
-Let's get started!
+Let's get started! -->
 
 ## Instructions
 
 ### The `.new_from_db` Method
 
-This is a class method that accepts a row from the database as an argument. It
+<!-- This is a class method that accepts a row from the database as an argument. It
 then creates a new student object based on the information in the row. Remember,
 our database doesn't store Ruby objects, so we have to manually convert it
-ourselves.
+ourselves. -->
 
 ### The `.find_by_name` Method
 
-This is a class method that accepts the name of a student. You will first run a
+<!-- This is a class method that accepts the name of a student. You will first run a
 SQL query to get the result from the database where the student's name matches
 the name passed into the argument.
 
 Next, you will take the result and create a new student instance using the
-`.new_from_db` method you just created.
+`.new_from_db` method you just created. -->
 
 ### The `.all` Method
 
-This is a class method that is very similar to the `.find_by_name` method. You
+<!-- This is a class method that is very similar to the `.find_by_name` method. You
 will not need an argument since we are returning everything in the database. Run
 the SQL to return everything (`*`) from a table.
 
 Again, you will use the `.new_from_db` method to create a student instance for
-each row that comes back from the database.
+each row that comes back from the database. -->
 
 ### The `.all_students_in_grade_9` Method
 
-This is a class method that does not need an argument. This method should return
-an array of all the students in grade 9.
+<!-- This is a class method that does not need an argument. This method should return
+an array of all the students in grade 9. -->
 
 ### The `.students_below_12th_grade` Method
 
-This is a class method that does not need an argument. This method should return
-an array of all the students below 12th grade.
+<!-- This is a class method that does not need an argument. This method should return
+an array of all the students below 12th grade. -->
 
 ### The `.first_X_students_in_grade_10` Method
 
-This is a class method that takes in an argument of the number of students from
+<!-- This is a class method that takes in an argument of the number of students from
 grade 10 to select. This method should return an array of exactly `X` number of
-students.
+students. -->
 
 ### The `.first_student_in_grade_10` Method
 
-This is a class method that does not need an argument. This should return the
-first student that is in grade 10.
+<!-- This is a class method that does not need an argument. This should return the
+first student that is in grade 10. -->
 
 ### The `.all_students_in_grade_X` Method
 
